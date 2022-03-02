@@ -1,0 +1,43 @@
+/*
+*{
+    box-sizing: border-box;
+}
+
+.fr{
+    padding-top: 30px;
+    padding-left: 70px;
+}
+
+body{
+    background-color: black;
+}*/
+
+body{
+    background: rgb(162,74,74);
+    background: linear-gradient(90deg, rgba(162,74,74,1) 0%, rgba(121,9,96,1) 48%, rgba(11,34,205,1) 100%);
+   /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,58,1) 48%, rgba(0,212,255,1) 100%);*/
+}
+
+.lol{
+    top: 100px;
+}
+
+.input_login{
+        margin-top: 10px;
+}
+
+.input_sub{
+    margin-top: 10px;
+    margin-left: 3.4em;
+}
+.input_new{
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin-left: 3.4em;
+}
+
+.card_register{
+    top: 50px;
+}
