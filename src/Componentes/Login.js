@@ -28,6 +28,7 @@ const Login = () => {
 
         if (data.ok){
             window.localStorage.setItem('id', dato.user_id);
+            window.localStorage.setItem('token', dato.token);
             window.location = "/profile"
         }else{
             alert("Error de inicio de sesion")
@@ -58,32 +59,9 @@ const Login = () => {
                     <button type="submit" onClick = {()=> pot(datos)} className="btn btn-primary input_sub">Iniciar sesion</button>
 
                     <div className="dropdown-divider"></div>
-                    {/*<a className="dropdown-item" onClick={()=> window.location="/register"}>Nuevo? Sign up</a>*/}
                     <Link  className="input_new"  to="/register">Nuevo? Sing up</Link>
                 </Card.Body>
             </Card>
-
-
-           /* <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '100vh'}}>
-
-                <form className="px-4 py-3">
-                    <div className="form-group">
-                        <label htmlFor="exampleDropdownFormPassword1">Username</label>
-                        <input type="text" className="form-control" name="username" placeholder="username" onChange={handleChange} />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="exampleDropdownFormPassword1">Password</label>
-                        <input type="password" className="form-control" name="password" placeholder="password" onChange={handleChange}  />
-                    </div>
-
-
-                    <button type="submit" onClick = {()=> pot(datos)} className="btn btn-primary">Iniciar sesion</button>
-                </form>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" >New around here? Sign up</a>
-
-            </div>*/
 
     )
 }

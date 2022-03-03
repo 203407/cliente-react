@@ -29,12 +29,9 @@ const Login = () => {
         const dato = await data.json();
 
         if (dato != 400){
-            //console.log('Registro exitoso')
             alert('registro exitoso')
             window.location= "/login"
         }else{
-            //console.log('Registro erorr: ' + dato.payload)
-            //alert('error: '+ JSON.stringify(dato.pay_load))
             alert('Por favor verifique bien los campos'+dato.error)
 
         }
@@ -49,13 +46,6 @@ const Login = () => {
     }
 
     return(
-        /*<div>
-            <input  type= "text"  name="username" placeholder="username" onChange={handleChange}   />
-            <input  type= "password"  name="password" placeholder="password" onChange={handleChange}  />
-            <input  type= "text"  name="email" placeholder="email" onChange={handleChange} />
-
-            <button onClick = {()=> pot(datos)} >Register</button>
-        </div>*/
 
         <Card style={{ width: '18rem' }} className="container card_register">
             <Card.Body>

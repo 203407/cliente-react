@@ -13,8 +13,10 @@ body{
 }*/
 
 body{
-    background: rgb(162,74,74);
-    background: linear-gradient(90deg, rgba(162,74,74,1) 0%, rgba(121,9,96,1) 48%, rgba(11,34,205,1) 100%);
+    background: rgb(176,107,107);
+    background: linear-gradient(90deg, rgba(176,107,107,1) 0%, rgba(148,82,133,1) 48%, rgba(84,136,156,1) 100%);
+    /*background: rgb(162,74,74);
+    background: linear-gradient(90deg, rgba(162,74,74,1) 0%, rgba(121,9,96,1) 48%, rgba(11,34,205,1) 100%);*/
    /* background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,58,1) 48%, rgba(0,212,255,1) 100%);*/
 }
@@ -40,4 +42,51 @@ body{
 
 .card_register{
     top: 50px;
+}
+.card_profile{
+    /*box-shadow: 60px -16px teal;*/
+    box-shadow:  10px 5px 5px black;
+    background-color: #e8eff2;
+}
+
+
+img {
+    display: inline-block;
+    width: 15em;
+    height: 15em;
+    margin-left : 20em;
+    border-radius: 10em;
+}
+
+.fil{
+    position : absolute;
+    top: 17em;
+    left: 18em
+}
+
+.user_last{
+    position : absolute;
+    top: 20em;
+    left: 17.5em
+}
+
+.first_ema{
+    position : absolute;
+    top: 23em;
+    left: 17.5em
+}
+
+.actuali{
+    position : absolute;
+    top: 26em;
+    left: 27em
+}
+
+input{
+    border-radius: 5px;
+    margin-right: 8px;
+}
+
+button{
+    border-radius: 7px;
 }

@@ -45,7 +45,6 @@ function App() {
           <Route  exact path="/register" element={<Register/>} ></Route>
           <Route  exact path="/login" element={<Login/>} ></Route>
           <Route  exact path="/profile" element={<Profile/>} ></Route>
-            profile
           {/*<Route  exact path="/mascotas" element={<Mascota/>} ></Route>
           <Route  exact path="/tipo" element={<Tipo/>} ></Route>
           <Route  exact path="/cita" element={<Citas/>} ></Route>*/}
