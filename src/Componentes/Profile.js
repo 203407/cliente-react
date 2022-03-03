@@ -20,35 +20,6 @@ const Login = () => {
     }, []);
 
 
-
-    const pot = () => {
-        const peticion = {
-            method: 'PUT',
-            body: JSON.stringify(datos),
-            headers: {
-                "Content-type": "application/json",
-                'Authorization': 'token '+window.localStorage.getItem('token')
-            }
-        }
-        put(peticion)
-    }
-
-    const put = async (peticion)  => {
-        const data = await fetch(urlPut,peticion)
-        const dato = await data.json();
-
-        if (data.ok){
-            if (form == null){
-                alert("Actualizado correctamente")
-                get()
-            }else{
-                pot2()
-            }
-        }else{
-            alert("Error al actualizar")
-        }
-    }
-
     const get = async ()  => {
         const dato = await fetch(urlGet, {
             method: 'GET',
@@ -62,19 +33,41 @@ const Login = () => {
     }
 
     const pot2 = () => {
+        const newF = new FormData();
+
+        if(form == null){
+            newF.append("username", datos.username);
+            newF.append("last_name", datos.last_name);
+            newF.append("first_name", datos.first_name);
+            newF.append("email", datos.email);
+
+            putm(newF)
+        }else{
+            form.append("username", datos.username);
+            form.append("last_name", datos.last_name);
+            form.append("first_name", datos.first_name);
+            form.append("email", datos.email);
+            putm(form)
+        }
+
+    }
+
+    const putm = (dat) => {
         axios({
-            url: urlPut2,
+            url: urlPut,
             method: "PUT",
             headers: {
                 'Authorization': 'token '+window.localStorage.getItem('token')
             },
-            data: form,
+            data: dat,
         }).then((res) => {alert("Datos actualizados", limpiarInputfile(),get())
-        }).catch((err) => {  alert("Error")});
+        }).catch((err) => {  alert(err.error)});
 
     }
+
     function limpiarInputfile() {
         document.getElementById("inputF").value ='';
+        setForm(null)
     }
 
     const handleChange = (e) =>{
@@ -113,7 +106,7 @@ const Login = () => {
 
 
                 <div className="actuali">
-                    <button onClick={()=> pot()}>Actualizar</button>
+                    <button onClick={()=> pot2()}>Actualizar</button>
                 </div>
 
 

@@ -3,6 +3,7 @@ import {Card} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../index.css"
+import axios from "axios";
 
 
 
@@ -28,14 +29,13 @@ const Login = () => {
         const data = await fetch(urlPost2,peticion)
         const dato = await data.json();
 
-        if (dato != 400){
-            alert('registro exitoso')
+
+        if (data.statusText != "Bad Request"){
+            console.log("todo goooo")
             window.location= "/login"
         }else{
-            alert('Por favor verifique bien los campos'+dato.error)
-
+            alert("Verifique bien los campos")
         }
-
     }
 
     const handleChange = (e) =>{
