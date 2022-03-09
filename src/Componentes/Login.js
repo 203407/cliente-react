@@ -8,6 +8,7 @@ const urlPost = "http://localhost:8000/api/v1/login/"
 
 const Login = () => {
     const [datos,setDatos] = useState({})
+    const [shown, setShown] = useState(false)
 
    const pot = (dat) => {
         const peticion = {
@@ -43,6 +44,9 @@ const Login = () => {
         });
     }
 
+    const switchShown = () => setShown(!shown);
+
+
     return(
 
 
@@ -58,10 +62,11 @@ const Login = () => {
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleDropdownFormPassword1">Password</label>
-                        <input type="password" className="form-control input_login" name="password" placeholder="password" onChange={handleChange}  />
+                        <input type={shown ? 'text' : 'password'}  className="form-control input_login_pass" name="password" placeholder="password" onChange={handleChange}  />
+                        <input type="checkbox"  onClick={switchShown}  className={"login_butonpass"}/>
                     </div>
-                    <button type="submit" onClick = {()=> pot(datos)} className="btn btn-primary input_sub">Iniciar sesion</button>
 
+                    <button type="submit" onClick = {()=> pot(datos)} className="btn btn-primary input_sub">Iniciar sesion</button>
                     <div className="dropdown-divider"></div>
                     <Link  className="input_new"  to="/register">Nuevo? Sing up</Link>
 

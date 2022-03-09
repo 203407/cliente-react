@@ -9,6 +9,7 @@ const urlPost = "http://localhost:8000/api/v2/register/"
 
 const Login = () => {
     const [datos,setDatos] = useState({})
+    const [shown, setShown] = useState(false)
 
     const pot = (dat) => {
         console.log(dat)
@@ -40,6 +41,9 @@ const Login = () => {
         });
     }
 
+    const switchShown = () => setShown(!shown);
+
+
     return(
 
         <Card style={{ width: '18rem' }} className="container card_register">
@@ -55,11 +59,13 @@ const Login = () => {
                 </div>
                 <div className="form-group">
                     <label >Password</label>
-                    <input type="password" className="form-control input_register" name="password" placeholder="password" onChange={handleChange}  />
+                    <span className={"showpass"}>Mostra contraseñas</span>
+                    <input type="checkbox"  onClick={switchShown}  className={"register_che"}/>
+                    <input type={shown ? 'text' : 'password'}  className="form-control input_register" name="password" placeholder="password" onChange={handleChange}   />
                 </div>
                 <div className="form-group">
                     <label >Password2</label>
-                    <input type="password" className="form-control input_register" name="password2" placeholder="password2" onChange={handleChange}  />
+                    <input type={shown ? 'text' : 'password'} className="form-control input_register" name="password2" placeholder="password2" onChange={handleChange}   />
                 </div>
                 <div className="form-group">
                     <label >Email</label>
