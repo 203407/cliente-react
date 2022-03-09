@@ -8,9 +8,6 @@ import Profile from "./Componentes/Profile";
 function App() {
   return (
 
-
-
-
       <Router>
 
         <Routes>

@@ -29,6 +29,7 @@ const Login = () => {
         if (data.ok){
             window.localStorage.setItem('id', dato.user_id);
             window.localStorage.setItem('token', dato.token);
+
             window.location = "/profile"
         }else{
             alert("Error de inicio de sesion")
@@ -45,8 +46,11 @@ const Login = () => {
     return(
 
 
-            <Card style={{ width: '18rem' }} className="container lol">
+            <Card style={{  width: '20rem' , height:' 21rem', top:'7rem' }} className="container card_login">
                 <Card.Body>
+                    <div className="login">
+                        <h2>Login</h2>
+                    </div>
 
                     <div className="form-group ">
                         <label htmlFor="exampleDropdownFormPassword1">Username</label>
@@ -60,6 +64,7 @@ const Login = () => {
 
                     <div className="dropdown-divider"></div>
                     <Link  className="input_new"  to="/register">Nuevo? Sing up</Link>
+
                 </Card.Body>
             </Card>
 

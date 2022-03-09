@@ -13,73 +13,184 @@ body{
 }*/
 
 body{
-    background: rgb(176,107,107);
-    background: linear-gradient(90deg, rgba(176,107,107,1) 0%, rgba(148,82,133,1) 48%, rgba(84,136,156,1) 100%);
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     /*background: rgb(162,74,74);
     background: linear-gradient(90deg, rgba(162,74,74,1) 0%, rgba(121,9,96,1) 48%, rgba(11,34,205,1) 100%);*/
    /* background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,58,1) 48%, rgba(0,212,255,1) 100%);*/
 }
 
-.lol{
-    top: 100px;
-}
 
 .input_login{
-        margin-top: 10px;
+    margin-top: 10px;
+
+}
+.input_sub{
+    margin-top: 15px;
+    margin-left: 4.1em;
+    margin-bottom: 4px;
 }
 
-.input_sub{
-    margin-top: 10px;
-    margin-left: 3.4em;
+.card_login{
+    box-shadow:  8px 5px 5px black;
 }
+.login{
+    margin-left: 90px;
+    margin-bottom: 20px;
+}
+
+
 .input_new{
     padding-left: 0px;
     padding-top: 0px;
     padding-right: 0px;
-    margin-left: 3.4em;
+    margin-left: 4.5em;
 }
 
 .card_register{
-    top: 50px;
+    top: 25px;
 }
+.back_login{
+    color: black;
+    position: absolute;
+    top:5px;
+    right: 12px;
+    border-bottom:  2px solid black;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 2px;
+    font-size: 13px;
+}
+.back_login:hover{
+    background:#ededed;
+}
+
+.line_register{
+    position :relative;
+    top: 35px;
+}
+.body_register{
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+.text_register{
+    position: absolute;
+    font-size: 20px;
+    top:5px;
+    left:5.1em;
+}
+
+.input_register{
+    margin-top: 9px;
+    border-bottom:  2px solid black;
+}
+
+
 .card_profile{
-    /*box-shadow: 60px -16px teal;*/
-    box-shadow:  10px 5px 5px black;
+    box-shadow:  5px 5px 5px black;
+    border-color: black;
+    border-width: 2px;
     background-color: #e8eff2;
 }
+
 
 
 img {
     display: inline-block;
     width: 15em;
     height: 15em;
-    margin-left : 20em;
+    margin-left : 18em;
     border-radius: 10em;
 }
 
 .fil{
     position : absolute;
     top: 17em;
-    left: 18em
+    left: 24em;
 }
+
 
 .user_last{
     position : absolute;
     top: 20em;
-    left: 17.5em
+    left: 10em
 }
 
 .first_ema{
     position : absolute;
     top: 23em;
-    left: 17.5em
+    left: 10em
 }
 
-.actuali{
+.edit{
     position : absolute;
-    top: 26em;
-    left: 27em
+    top: 26.5em;
+    left: 20.5em
+}
+.actuali{
+    margin-left: 10px;
+}
+
+.label_profile{
+    margin-right: 10px;
+}
+.label_profile2{
+    margin-right: 9px;
+}
+.label_profile3{
+    margin-right: 44px;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    font-size: 1em;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #dfdfdf;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #26c0b6;
+}
+.inputfile + label {
+    cursor: pointer;
+}
+
+.log_out_boton{
+    border: 0.5px solid black;
+    background-color:#e8eff2 ;
+
+}
+.log_out_link{
+    position: absolute;
+    right:10px;
+    width: 50px;
+    color: black;
+    border-bottom:  2px solid black;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 2px;
+    font-size: 13px;
+}
+.log_out_link:hover{
+    background:#ededed;
+}
+
+.log_out_boton:hover{
+    color: #26c0b6;
 }
 
 input{
@@ -87,6 +198,7 @@ input{
     margin-right: 8px;
 }
 
-button{
+button {
     border-radius: 7px;
+
 }
